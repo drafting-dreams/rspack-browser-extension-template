@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "version": "0.0.1",
+  "name": "Chrome Extension with React & Rspack",
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  },
+  "description": "A chrome extension initializer built with React 18, Rspack",
+  "icons": {
+    "16": "logo.png",
+    "32": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+
+  "background": { "service_worker": "background.js" },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "devtools_page": "devtools.html"
+}
