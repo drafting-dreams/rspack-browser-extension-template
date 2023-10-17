@@ -17,20 +17,8 @@ module.exports = {
   builtins: {
     html: [
       {
-        chunks: ['content'],
-        filename: 'content.html',
-        minify: true,
-        template: './src/index.html',
-      },
-      {
         chunks: ['devtools'],
         filename: 'devtools.html',
-        minify: true,
-        template: './src/index.html',
-      },
-      {
-        chunks: ['devtools-panel'],
-        filename: 'devtools-panel.html',
         minify: true,
         template: './src/index.html',
       },
